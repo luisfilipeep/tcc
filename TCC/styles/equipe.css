@@ -1,0 +1,309 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  --color1: #1D2242;
+  --color2: #CBCCE8;
+  --color3: #383B5D;
+
+  --color4: var(--lightmode-color1);
+  --lightmode-color1: #ff721a;
+  --darkmode-color1: #000000;
+  --darkmode-color2: #1D2242;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  transition: 400ms ease-in-out;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/*Equipe*/
+
+.nossa-equipe {
+  font-size: max(5vh);
+  color: var(--color1);
+  text-align: center;
+  margin: 5% 0;
+}
+
+.cards {
+  /** Container de card 1**/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+
+.cards2 {
+  /** Container de card 2**/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+
+.card {
+  margin: 15vh 0;
+  width: 300px;
+  height: 480px;
+  background-color: #1D2242;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px 20px 0px 20px;
+}
+
+.card .imagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foto {
+  border: 3px solid #1D2242;
+  width: 180px;
+  border-radius: 50%;
+}
+
+.card h2 {
+  color: #fff;
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.card h3 {
+  color:var(--color4);
+}
+
+.foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: -104px;
+}
+
+
+.desc {
+  /** Paragrafo do texto **/
+  padding: 10px 0 10px 0;
+  font-size: 12px;
+  color: #fff;
+  max-width: 100%;
+  min-height: 13em;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-port {
+  border: none;
+  font-size: 19px;
+  font-weight: 600;
+  background-color: var(--color4);
+  padding: 4px 92px;
+  margin: 20px 0;
+  color: #fff;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-port:hover {
+  background-color: #fff;
+  color: var(--color4);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 30px;
+
+}
+
+.icons img {
+  border-radius: none;
+  width: 36px;
+  height: 36px;
+  transition: .2s;
+  cursor: pointer;
+
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+}
+
+/*Footer*/
+
+footer {
+  color: #000;
+  text-align: center;
+  margin: 0 5% 10vh 0;
+
+}
+
+footer>h1 {
+  color: var(--color4);
+  font-size: 20px;
+  text-align: center;
+
+}
+
+/*Responsividade*/
+@media only screen and (max-width: 940px) {
+
+  #modo {
+    height: 60px;
+    background: #1D2242;
+    border-right: 1em solid #1D2242;
+    border-left: 4px solid #1D2242;
+    padding: 5px 2px;
+    border-radius: 4.2em 0 0 4em;
+  }
+
+  .container1 .container2 {
+    margin: auto;
+  }
+
+  .container2 {
+    background-color: #1D2242;
+    width: 100%;
+    height: 100%;
+    margin: 0 5%;
+    margin-top: 10px;
+    padding: 25px;
+  }
+
+  .nossa-equipe {
+    padding-top: 15vh;
+  }
+}
+
+
+.switch button {
+  cursor: pointer;
+  background-color: var(--lightmode-color1);
+  transition: 0.3s ease;
+}
+
+.switch {
+  /**botão do switch **/
+  position: fixed;
+  top: 20%;
+  right: -100px;
+  width: 195px;
+  height: 70px;
+}
+
+.switch input {
+  opacity: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--lightmode-color1);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  /** bolinha do switch **/
+  position: absolute;
+  content: "";
+  width: 190px;
+  height: 66px;
+  left: 10px;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-image: url(https://media1.giphy.com/media/F0HOpzaUXInKxPLtr9/giphy.gif?cid=6c09b9528001031004e2acedbbcf26d11782798496ec3aaa&rid=giphy.gif&ct=s);
+  background-size: 56px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  
+}
+
+input:checked+.slider {
+  background-color: #262A56;
+}
+
+input:checked+.slider:before {
+  /** bolinha no dark-mode **/
+  background-image: url(https://media.tenor.com/DTIl6DWhrZwAAAAj/moon-spacedoodles.gif);
+  background-repeat: no-repeat;
+}
+
+.slider {
+  border-radius: 34px;
+}
+
+
+.dark-mode {
+  background-color: var(--darkmode-color1);
+  color: #fff;
+}
+
+.dark-mode button {
+  background-color: var(--darkmode-color2);
+}
+
+
+.dark-mode button:active {
+  background-color: #181b36;
+  box-shadow: 0 5px #111325;
+}
+
+.dark-mode #footer a {
+  color: var(--darkmode-color2);
+}
+
+.dark-mode body {
+  background: #111325;
+}
+
+.dark-mode h1 {
+  color:#fff;
+}
+
+.dark-mode h3 {
+  color:var(--color2);
+}
+
+.dark-mode .btn-port {
+  background-color: #CBCCE8;
+  color: #111325;
+}
+
+.dark-mode .btn-port:hover {
+  background-color: #fff;
+  color: #111325;
+}
+
+.dark-mode #footer-text {
+  color: #CBCCE8;
+}
+
+/** codigo base do switch https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch **/
+/*Marco Marchi e Fernando Souza */

@@ -1,0 +1,38 @@
+
+.titulo{
+background-color: #213F8F;
+padding: 20px;
+font-family: 'Nunito Sans', sans-serif;
+}
+
+
+.texto{
+    background-color: #6780C2;
+    padding: 15px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.texto2{
+    background-color: #FA7432;
+    min-height: 90vh;
+    width: 100%;
+    padding: 30px;
+    text-decoration: dashed;
+}
+
+
+
+
+p{
+    font-size: 22px;
+}
+
+@media (max-width:768px){
+
+
+    section img{
+     width: 330px;
+     
+    }
+
+}
